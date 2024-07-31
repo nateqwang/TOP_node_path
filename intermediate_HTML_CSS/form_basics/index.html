@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="https://httpbin.org/post" method="post">
+        <label for="text-input">TEXT</label>
+        <input type="text" id="text-input" placeholder="enter here" name="text-input">
+    </form>
+    <form action="">
+        <h1>LOGIN FORM</h1>
+        <input type="email" id="email-input" placeholder="bobdababy12@gmail.com" name="email">
+        <input type="password" id="password-input" placeholder="password" name="password">
+    </form>
+    <form action="">
+        <h1>NUMBERS FORM</h1>
+        <input type="number">
+    </form>
+    <form action="">
+        <h1>DATE FORM</h1>
+        <input type="date">
+    </form>
+    <form action="">
+        <h1>text area</h1>
+        <textarea rows="20" cols="60">some text goes here</textarea>
+    </form>
+    <form action="">
+        <h1>dropdown</h1>
+        <select>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+        <select>
+            <optgroup label="numbers">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </optgroup>
+            <optgroup label="strings">
+                <option value="one">one</option>
+                <option value="two">two</option>
+                <option value="three">three</option>
+            </optgroup>
+        </select>
+    </form>
+    <form action="">
+        <h1>radio</h1>
+        <input type="radio" id="child" name="ticket_type" value="child">
+        <label for="child">Child</label>
+        <input type="radio" id="adult" name="ticket_type" value="adult" checked>
+        <label for="adult">Adult</label>
+        <input type="radio" id="senior" name="ticket_type" value="senior">
+        <label for="senior">Senior</label>
+    </form>
+    <form action="">
+        <h1>checkbox</h1>
+            <input type="checkbox" id="sausage" name="topping" value="sausage" checked>
+            <label for="sausage">Sausage</label>
+            <input type="checkbox" id="onions" name="topping" value="onions">
+            <label for="onions">Onions</label>
+            <input type="checkbox" id="pepperoni" name="topping" value="pepperoni">
+            <label for="pepperoni">Pepperoni</label>
+            <input type="checkbox" id="mushrooms" name="topping" value="mushrooms">
+            <label for="mushrooms">Mushrooms</label>
+            <button type="submit">submit</button>
+            <button type="reset">reset</button>
+    </form>
+    <form>
+        <fieldset>
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name">
+        
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name">
+          </fieldset>
+          <fieldset>
+            <legend>Contact Details</legend>
+          
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+          
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" id="phone_number" name="phone_number">
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+          </fieldset>
+          
+          <fieldset>
+            <legend>Delivery Details</legend>
+          
+            <label for="street_address">Street Address:</label>
+            <input type="text" id="street_address" name="street_address">
+          
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city">
+          
+            <label for="zip_code">Zip Code:</label>
+            <input type="text" id="zip_code" name="zip_code">
+          </fieldset>
+          <fieldset>
+            <legend>What would you like to drink?</legend>
+          
+            <div>
+              <input type="radio" name="drink" id="coffee" value="coffee">
+              <label for="coffee">Coffee</label>
+            </div>
+          
+            <div>
+              <input type="radio" name="drink" id="tea" value="tea">
+              <label for="tea">Tea</label>
+            </div>
+          
+            <div>
+              <input type="radio" name="drink" id="soda" value="soda">
+              <label for="soda">Soda</label>
+            </div>
+          </fieldset>          
+    </form>
+</body>
+</html>
