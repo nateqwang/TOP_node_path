@@ -1,0 +1,37 @@
+body {
+    overflow-y: hidden;
+    display: flex;
+    align-items: stretch;
+    margin: 0px;
+}
+
+.left_image {
+    display: flex;
+    align-items: stretch;
+    height: 100vh;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+.odin_text {
+    font-size: 10rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.logo_image {
+    flex-shrink: 1;
+    width: 20%;
+    height: auto;
+}
