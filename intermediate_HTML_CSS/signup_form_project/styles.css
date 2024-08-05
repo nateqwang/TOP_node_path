@@ -19,7 +19,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    align-self: center;
+    top: 20%;
     padding: 5%;
     box-sizing: border-box;
 }
