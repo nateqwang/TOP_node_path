@@ -8,6 +8,7 @@ body {
 .left_image {
     display: flex;
     align-items: stretch;
+    justify-content: center;
     height: 100vh;
     position: relative;
 }
@@ -34,4 +35,11 @@ body {
     flex-shrink: 1;
     width: 20%;
     height: auto;
+}
+
+.credits {
+    position: absolute;
+    bottom: 20px;
+    color: white;
+    font-size: 1.5rem;
 }
