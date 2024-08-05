@@ -101,3 +101,22 @@ input {
     height: 30px;
     border-radius: 5px;
 }
+
+.account_action {
+    padding: 5rem 16px 0px 5rem;
+}
+
+button {
+    width: 250px;
+    height: 55px;
+    border-radius: 5px;
+    margin-bottom: 16px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: white;
+    background-color: rgb(18, 101, 18);
+}
+
+.account_action>p {
+    font-size: 1.2rem;
+}
