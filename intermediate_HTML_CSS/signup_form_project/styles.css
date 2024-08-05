@@ -43,3 +43,11 @@ body {
     color: white;
     font-size: 1.5rem;
 }
+
+.info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2rem;
+    padding: 7rem 5rem;
+    font-weight: 700;
+    background-color: beige;
+}
