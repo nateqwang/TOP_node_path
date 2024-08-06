@@ -2,6 +2,16 @@
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --main_theme : #815854;
+    --secondary_theme : #F9EBDE;
+}
+
+.icon {
+    filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(40deg) brightness(100%) contrast(102%);
 }
 
 .page_container {
@@ -14,6 +24,25 @@
 .dashboard {
     grid-row: 1 / span 2;
     grid-column: 1;
+    background-color: var(--main_theme);
+    padding: 20px;
+}
+
+.logo_dash {
+    display: flex;
+    align-items: center;
+    margin-bottom: 55px;
+}
+
+.logo_dash > .icon {
+    height: 90px;
+    width: 90px;
+}
+
+.logo_dash > p {
+    font-size: 3rem;
+    color: white;
+    font-weight: 700;
 }
 
 .head {
@@ -25,3 +54,4 @@
     grid-row: 2;
     grid-column: 2;
 }
+
