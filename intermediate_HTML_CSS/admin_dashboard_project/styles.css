@@ -10,7 +10,7 @@
     --secondary_theme : #F9EBDE;
 }
 
-.icon {
+.dashboard .icon {
     filter: invert(99%) sepia(0%) saturate(0%) hue-rotate(40deg) brightness(100%) contrast(102%);
 }
 
@@ -43,6 +43,29 @@
     font-size: 3rem;
     color: white;
     font-weight: 700;
+    margin-left: 20px;
+}
+
+.nav_dash {
+    margin-left: 10px;
+}
+
+.nav_dash_li {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.nav_dash_li .icon {
+    height: 50px;
+    width: 50px;
+}
+
+.nav_dash_li p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
 }
 
 .head {
