@@ -31,7 +31,7 @@
 .logo_dash {
     display: flex;
     align-items: center;
-    margin-bottom: 55px;
+    margin-bottom: 70px;
 }
 
 .logo_dash > .icon {
@@ -46,26 +46,34 @@
     margin-left: 20px;
 }
 
-.nav_dash {
+.nav_dash,
+.setting_dash {
     margin-left: 10px;
 }
 
-.nav_dash_li {
+.nav_dash_li,
+.setting_dash_li {
     display: flex;
     align-items: center;
     gap: 50px;
     margin-bottom: 20px;
 }
 
-.nav_dash_li .icon {
+.nav_dash_li .icon,
+.setting_dash_li .icon {
     height: 50px;
     width: 50px;
 }
 
-.nav_dash_li p {
+.nav_dash_li p,
+.setting_dash p {
     font-size: 2rem;
     font-weight: 700;
     color: white;
+}
+
+.setting_dash {
+    margin-top: 100px;
 }
 
 .head {
