@@ -187,8 +187,29 @@
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 1fr 1fr;
+    background-color: var(--secondary_theme);
 }
 
 .projects {
     grid-row: 1 / span 2;
+}
+
+.projects h2 {
+    font-size: 2rem;
+}
+
+.projects h3 {
+    font-size: 1.5rem;
+}
+
+.project_desc {
+    font-size: 1.3rem;
+    color: gray;
+}
+
+.project_card {
+    height: 25%;
+    border-left: 10px solid #ffae42;
+    border-radius: 10px;
+    background-color: white;
 }
