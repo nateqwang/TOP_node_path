@@ -60,7 +60,8 @@
 }
 
 .nav_dash_li .icon,
-.setting_dash_li .icon {
+.setting_dash_li .icon,
+.head .icon {
     height: 50px;
     width: 50px;
 }
@@ -90,5 +91,21 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-template-rows: 1fr 1.8fr;
+    padding: 20px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+#search_input {
+    height: 50px;
+    border-radius: 20px;
+    margin-left: 35px;
+    width: 80%;
+    border: 0px solid white;
+    background-color: lightgray;
 }
 
