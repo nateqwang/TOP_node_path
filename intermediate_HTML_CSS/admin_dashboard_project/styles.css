@@ -183,3 +183,12 @@
     border: 1px solid white;
 }
 
+.main_nav {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.projects {
+    grid-row: 1 / span 2;
+}
