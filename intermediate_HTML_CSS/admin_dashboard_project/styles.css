@@ -96,8 +96,8 @@
 
 .head {
     display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 1.8fr;
+    grid-template-columns: 3fr 1.9fr;
+    grid-template-rows: 1fr 1.9fr;
     padding: 20px;
 }
 
@@ -111,13 +111,13 @@
     height: 50px;
     border-radius: 20px;
     margin-left: 35px;
-    width: 80%;
+    width: 90%;
     border: 0px solid white;
     background-color: lightgray;
 }
 
 .profile {
-    margin-left: 75px;
+    margin-left: 100px;
     margin-right: 75px;
     display: flex;
     align-items: center;
