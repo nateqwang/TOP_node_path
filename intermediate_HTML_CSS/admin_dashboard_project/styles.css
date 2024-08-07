@@ -140,4 +140,21 @@
     font-size: 2rem;
 }
 
+.account .profile_pic_background {
+    background-color: #ffae42;
+    height: 100px;
+    width: 100px;
+}
+
+.greeting  p{
+    font-weight: 700;
+}
+
+.greeting :first-child {
+    font-size: 1rem;
+}
+
+.greeting :last-child {
+    font-size: 2.4rem;
+}
 
