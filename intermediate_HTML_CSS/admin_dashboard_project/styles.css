@@ -66,6 +66,13 @@
     width: 50px;
 }
 
+.profile_pic_background {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .nav_dash_li p,
 .setting_dash p {
     font-size: 2rem;
@@ -108,4 +115,29 @@
     border: 0px solid white;
     background-color: lightgray;
 }
+
+.profile {
+    margin-left: 75px;
+    margin-right: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.profile img {
+    height: 60px;
+    width: 60px;
+}
+
+.profile .profile_pic_background {
+    background-color: #ffae42;
+    height: 65px;
+    width: 65px;
+}
+
+.profile p {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
 
