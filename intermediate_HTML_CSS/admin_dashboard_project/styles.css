@@ -251,6 +251,20 @@
     border-bottom: 1px solid lightgray;
 }
 
+.trending_profiles {
+    background-color: white;
+    padding: 20px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.trending_project {
+    display: flex;
+    gap: 25px;
+}
+
 .trending_profiles .profile_pic_background {
     border-radius: 50%;
     height: 65px;
