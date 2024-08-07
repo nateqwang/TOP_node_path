@@ -188,18 +188,29 @@
     grid-template-columns: 2.5fr 1fr;
     grid-template-rows: 1fr 1fr;
     background-color: var(--secondary_theme);
+    padding: 45px 25px;
 }
 
 .projects {
     grid-row: 1 / span 2;
 }
 
+.project_cards {
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    grid-template-rows: repeat(3 , 1fr);
+    gap: 20px;
+    height: calc(970px);
+}
+
 .projects h2 {
     font-size: 2rem;
+    margin-bottom: 15px;
 }
 
 .projects h3 {
     font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
 .project_desc {
@@ -208,8 +219,8 @@
 }
 
 .project_card {
-    height: 25%;
     border-left: 10px solid #ffae42;
     border-radius: 10px;
     background-color: white;
+    padding: 35px 25px;
 }
