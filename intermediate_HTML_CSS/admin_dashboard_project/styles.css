@@ -206,7 +206,8 @@
 }
 
 .projects h2,
-.announcements h2 {
+.announcements h2,
+.trending_section>h2 {
     font-size: 2rem;
     margin-bottom: 15px;
 }
