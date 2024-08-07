@@ -165,3 +165,14 @@
     font-size: 2.4rem;
 }
 
+.nav_option_button {
+    background-color: var(--main_theme);
+    color: white;
+    font-weight: 700;
+    font-size: 2.2rem;
+    height: 75px;
+    width: 170px;
+    border-radius: 35px;
+    border: 1px solid white;
+}
+
