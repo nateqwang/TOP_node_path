@@ -165,6 +165,13 @@
     font-size: 2.4rem;
 }
 
+.nav_options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 60px;
+}
+
 .nav_option_button {
     background-color: var(--main_theme);
     color: white;
