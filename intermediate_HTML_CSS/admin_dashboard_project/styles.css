@@ -104,7 +104,7 @@
 .search {
     display: flex;
     align-items: center;
-    margin-left: 50px;
+    padding-left: 50px;
 }
 
 #search_input {
@@ -140,6 +140,12 @@
     font-size: 2rem;
 }
 
+.account {
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
 .account .profile_pic_background {
     background-color: #ffae42;
     height: 100px;
@@ -148,6 +154,7 @@
 
 .greeting  p{
     font-weight: 700;
+    margin-left: 35px;
 }
 
 .greeting :first-child {
