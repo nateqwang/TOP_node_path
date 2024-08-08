@@ -14,6 +14,10 @@ const gameLogic = (function () {
             } else if (i % 2 === 1) {
                 playRound(1,desiredIndex)
             }
+
+            if (checkWin() === true) {
+                break;
+            }
         }
     }
 
