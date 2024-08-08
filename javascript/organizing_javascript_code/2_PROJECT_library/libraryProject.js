@@ -26,6 +26,10 @@ const myLibrary = [];
 const libraryDisplay = document.querySelector(".book_container");
 
 function displayBooks () {
+    const allBooks = Array.from(document.querySelectorAll('.book_card'));
+    for (bookNode of allBooks) {
+        bookNode.remove();
+    }
     for (currentBook of myLibrary) {
         const bookCard = document.createElement('div')
         bookCard.setAttribute ('class', 'book_card')
@@ -49,6 +53,11 @@ const dialogForm = document.querySelector("dialog");
 const showDialog = document.querySelector('.add_book');
 const submitForm = document.querySelector('form button');
 const bookForm = document.querySelector('form');
+
+submitForm.addEventListener('click', () => {
+    dialogForm.close();
+})
+
 
 showDialog.addEventListener('click', () => {
     dialogForm.showModal();
