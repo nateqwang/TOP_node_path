@@ -17,7 +17,11 @@ const gameLogic = (function () {
         }
     }
     const playRound = function (player,arrayNum) {
-        gameboard.gameboardArray[arrayNum] = player;
+        if ((gameboard.gameboardArray[arrayNum] === 2) && arrayNum <= 9) {
+            gameboard.gameboardArray[arrayNum] = player;
+        } else {
+            playRound (player, Number(prompt('invalid, try again')));
+        }
     }
     return {
         playGame,
