@@ -43,6 +43,15 @@ function displayBooks () {
 
 myLibrary.push(hobbit);
 
+displayBooks();
+
+const dialogForm = document.querySelector("dialog");
+const showDialog = document.querySelector('.add_book')
+
+showDialog.addEventListener('click', () => {
+    dialogForm.showModal();
+});
+
 
 
 
