@@ -28,6 +28,7 @@ const libraryDisplay = document.querySelector(".book_container");
 function displayBooks () {
     for (currentBook of myLibrary) {
         const bookCard = document.createElement('div')
+        bookCard.setAttribute ('class', 'book_card')
         for (let i = 0; i < currentBook.numOfKeys; i++) {
             const bookInfo = document.createElement('p');
             let currentKey = Object.keys(currentBook)[i]
