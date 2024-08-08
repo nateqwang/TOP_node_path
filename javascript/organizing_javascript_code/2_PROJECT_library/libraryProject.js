@@ -58,9 +58,10 @@ function processForm () {
     let bookTitle = document.querySelector('#new_title').value;
     let author = document.querySelector('#new_author').value;
     let pages = Number(document.querySelector('#new_pages').value);
-    let readStatus = document.querySelector('#read_status').value;
-    console.log(bookTitle);
-    console.log(pages);
+    let readStatus = Boolean(document.querySelector('#read_status').value);
+    const newBook = new Book (bookTitle, author, pages, readStatus);
+    myLibrary.push(newBook);
+    displayBooks();
     return false;
 }
 
