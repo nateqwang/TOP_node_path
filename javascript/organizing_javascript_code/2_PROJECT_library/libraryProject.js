@@ -46,11 +46,23 @@ myLibrary.push(hobbit);
 displayBooks();
 
 const dialogForm = document.querySelector("dialog");
-const showDialog = document.querySelector('.add_book')
+const showDialog = document.querySelector('.add_book');
+const submitForm = document.querySelector('form button');
+const bookForm = document.querySelector('form');
 
 showDialog.addEventListener('click', () => {
     dialogForm.showModal();
 });
+
+function processForm () {
+    let bookTitle = document.querySelector('#new_title').value;
+    let author = document.querySelector('#new_author').value;
+    let pages = Number(document.querySelector('#new_pages').value);
+    let readStatus = document.querySelector('#read_status').value;
+    console.log(bookTitle);
+    console.log(pages);
+    return false;
+}
 
 
 
