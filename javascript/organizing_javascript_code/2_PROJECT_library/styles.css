@@ -25,6 +25,11 @@ h1 {
 
 .book_container {
     background-color: #f2f2f2;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 50px;
+    padding: 60px 120px;
 }
 
 .bottom {
