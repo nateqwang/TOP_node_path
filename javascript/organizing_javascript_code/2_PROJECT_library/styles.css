@@ -1,0 +1,24 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: monospace;
+}
+
+.body_container {
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 1fr 6fr 1fr;
+}
+
+.header {
+    background-color: #814d2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 6rem;
+    color: white;
+    font-weight: 700;
+}
