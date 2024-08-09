@@ -1,6 +1,6 @@
 const gameboard = (function () {
     let gameboardArray = [2, 2, 2, 2, 2, 2, 2, 2, 2]
-    const individualGrids = document.querySelectorAll('.single_grid')
+    const individualGrids = Array.from(document.querySelectorAll('.single_grid'));
     return {
         gameboardArray,
         individualGrids
@@ -10,7 +10,7 @@ const gameboard = (function () {
 const gameLogic = (function () {
     const playGame = function () {
         for (let i = 0; i < 9; i++) {
-            let desiredIndex = Number(prompt('where to place'))
+            let desiredIndex = Number(prompt('where to place')) /////////////////////////////
             if (i % 2 === 0) {
                 playRound(0,desiredIndex);
             } else if (i % 2 === 1) {
