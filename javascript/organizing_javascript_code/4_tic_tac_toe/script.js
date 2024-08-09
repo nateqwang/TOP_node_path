@@ -1,13 +1,34 @@
 const gameboard = (function () {
     let gameboardArray = [2, 2, 2, 2, 2, 2, 2, 2, 2]
-    const individualGrids = Array.from(document.querySelectorAll('.single_grid'));
+    const individualGrids = document.querySelectorAll('.single_grid');
     return {
         gameboardArray,
         individualGrids
     }
-})()
+})();
 
 const gameLogic = (function () {
+
+    let playerCount = 0;
+    let turnNum = 0
+
+    const increaseTurnNum = function () {
+        gameLogic.turnNum = gameLogic.turnNum + 1
+    }
+
+    const increasePlayerCount = function (playerObject) {
+        gameLogic.playerCount = gameLogic.playerCount + 1;
+    }
+
+    const decreasePlayerCount = function () {
+        gameLogic.playerCount = gameLogic.playerCount - 1;
+    }
+
+    const checkPlayerCount = function () {
+        console.log(gameLogic.playerCount);
+        return gameLogic.playerCount;
+    }
+
     const playGame = function () {
         for (let i = 0; i < 9; i++) {
             let desiredIndex = Number(prompt('where to place')) /////////////////////////////
@@ -48,7 +69,9 @@ const gameLogic = (function () {
 
     const playRound = function (player,arrayNum) {
         if ((gameboard.gameboardArray[arrayNum] === 2) && arrayNum <= 9) {
-            gameboard.gameboardArray[arrayNum] = player;
+            gameboard.gameboardArray[arrayNum] = player.marker;
+            gameLogic.increaseTurnNum();
+            displayFunctions.displayBoard();
         } else {
             playRound (player, Number(prompt('invalid, try again')));
         }
@@ -56,12 +79,17 @@ const gameLogic = (function () {
     return {
         playGame,
         playRound,
-        checkWin
+        checkWin,
+        increasePlayerCount,
+        decreasePlayerCount,
+        increaseTurnNum,
+        playerCount,
+        turnNum
     };
 })()
 
-const displayFunctions= (function () {
-    const displayBoard = () => {
+const displayFunctions = (function () {
+    const displayBoard = function () {
         for (let i = 0; i < 9; i++) {
             let currentGrid = gameboard.individualGrids[i];
             currentGrid.textContent = `${gameboard.gameboardArray[i]}`
@@ -71,5 +99,58 @@ const displayFunctions= (function () {
     return {
         displayBoard
     };
-})()
+})();
 
+const userInteraction = (function () {
+    const enableGridInteraction = function () {
+        for (let i = 0; i < 9; i++) {
+            let index = Number(gameboard.individualGrids[i].getAttribute('id'));
+            gameboard.individualGrids[i].addEventListener('click', () => {
+                if (gameLogic.turnNum % 2 === 0) {
+                    gameLogic.playRound(players.players[0],index);
+                } else if (gameLogic.turnNum % 2 === 1) {
+                    gameLogic.playRound(players.players[1],index);
+                }
+            })
+        }
+    }
+
+    const addPlayer = function (name, marker) {
+        let newPlayer = new Player (name, marker)
+        
+    }
+
+    return {
+        enableGridInteraction,
+        addPlayer
+    }
+
+    }
+)();
+
+const players = (function () {
+
+    let players = []
+
+    const Player = (playerName, marker) => {
+        return {
+            playerName,
+            marker
+        }
+    }
+
+    const createPlayer = (playerName, marker) => {
+        let newPlayer = Player (playerName, marker);
+        players.push(newPlayer);
+        gameLogic.increasePlayerCount();
+    }
+
+    return {
+        Player,
+        createPlayer,
+        players
+    }
+})();
+
+players.createPlayer('a','X');
+players.createPlayer('b','O');
