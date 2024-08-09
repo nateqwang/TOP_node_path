@@ -1,7 +1,9 @@
 const gameboard = (function () {
     let gameboardArray = [2, 2, 2, 2, 2, 2, 2, 2, 2]
+    const individualGrids = document.querySelectorAll('.single_grid')
     return {
-        gameboardArray
+        gameboardArray,
+        individualGrids
     }
 })()
 
