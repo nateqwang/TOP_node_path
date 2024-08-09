@@ -60,3 +60,16 @@ const gameLogic = (function () {
     };
 })()
 
+const displayFunctions= (function () {
+    const displayBoard = () => {
+        for (let i = 0; i < 9; i++) {
+            let currentGrid = gameboard.individualGrids[i];
+            currentGrid.textContent = `${gameboard.gameboardArray[i]}`
+        }
+    }
+
+    return {
+        displayBoard
+    };
+})()
+
