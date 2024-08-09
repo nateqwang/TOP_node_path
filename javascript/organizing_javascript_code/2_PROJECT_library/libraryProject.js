@@ -38,6 +38,8 @@ function displayBooks () {
             bookInfo.textContent = `${currentBook[currentKey]}`;
             bookCard.appendChild(bookInfo);
         }
+        const cover = document.createElement('div');
+        cover.setAttribute('class', 'cover');
 
         const isBook = (book) => book.title == currentBook.title;
 
@@ -50,8 +52,8 @@ function displayBooks () {
             displayBooks();
         })
 
-
         bookCard.appendChild(removeButton);
+        bookCard.appendChild(cover);
         libraryDisplay.appendChild(bookCard);
     }
 
