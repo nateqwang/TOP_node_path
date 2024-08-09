@@ -2,11 +2,11 @@ function Book(title, author, pages, read) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.read = this.isRead();
+    this.readStatus = this.isRead(read);
 }
 
-Book.prototype.isRead = function () {
-    if (this.read === true) {
+Book.prototype.isRead = function (readStatus) {
+    if (readStatus === true) {
         return ('already read');
     } else {
         return ('not read yet');
@@ -19,8 +19,6 @@ Book.prototype.info = function() {
 
 Book.prototype.numOfKeys = 4;
 
-const hobbit = new Book ('The Hobbit', 'Tolkien', 295, false);
-
 const myLibrary = [];
 
 const libraryDisplay = document.querySelector(".book_container");
@@ -32,7 +30,7 @@ function displayBooks () {
     }
     for (currentBook of myLibrary) {
         const bookCard = document.createElement('div')
-        bookCard.setAttribute ('class', 'book_card')
+        bookCard.setAttribute('class', 'book_card')
         for (let i = 0; i < currentBook.numOfKeys; i++) {
             const bookInfo = document.createElement('p');
             let currentKey = Object.keys(currentBook)[i]
@@ -40,12 +38,31 @@ function displayBooks () {
             bookInfo.textContent = `${currentBook[currentKey]}`;
             bookCard.appendChild(bookInfo);
         }
+
+        const isBook = (book) => book.title == currentBook.title;
+
+        let bookIndex = myLibrary.findIndex(isBook);
+
+        const removeButton = document.createElement('button')
+        removeButton.textContent = 'remove';
+        removeButton.addEventListener('click', () => {
+            myLibrary.splice(bookIndex,1);
+            displayBooks();
+        })
+
+
+        bookCard.appendChild(removeButton);
         libraryDisplay.appendChild(bookCard);
     }
 
 }
 
+const hobbit = new Book ('The Hobbit', 'Tolkien', 295, false);
+
+const potter = new Book ('Harry Potter', 'Rowling', 375, true);
+
 myLibrary.push(hobbit);
+myLibrary.push(potter);
 
 displayBooks();
 
