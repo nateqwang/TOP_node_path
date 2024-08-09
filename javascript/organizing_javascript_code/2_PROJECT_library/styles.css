@@ -30,6 +30,7 @@ h1 {
     grid-template-rows: 1fr 1fr;
     gap: 50px;
     padding: 60px 120px;
+    position: relative;
 }
 
 .book_card {
@@ -83,4 +84,41 @@ h1 {
     background-color: #6bd66b;
     border: 0px solid white;
     border-radius: 30px;
+}
+
+dialog {
+    width: 50%;
+    height: 50%;
+    border: none;
+    border-radius: 50px;
+    padding: 25px;
+    position: absolute;
+    left: 50%;
+    margin-left: calc(50% / -2) ;
+    top: 15%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    align-self: center;
+}
+
+input {
+    width: 50%;
+    height: 50px;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+form>button {
+    height: 75px;
+    width: 200px;
+    border: none;
+    border-radius: 15px;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 15px;
 }
