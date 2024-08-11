@@ -2,12 +2,19 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
     height: 100vh;
     display: grid;
-    grid-template-rows: 1fr 10fr 1.5fr;
+    grid-template-rows: 1fr 5fr 1.5fr;
+}
+
+h1 {
+    font-size: 4rem;
+    align-self: center;
+    justify-self: center;
 }
 
 .grid_container {
@@ -15,6 +22,10 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     border: 1px solid black;
+    height: 75vh;
+    width: 75vh;
+    align-self: center;
+    justify-self: center;
 }
 
 .single_grid {
