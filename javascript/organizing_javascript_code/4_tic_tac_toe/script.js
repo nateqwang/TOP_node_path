@@ -154,3 +154,4 @@ const players = (function () {
 
 players.createPlayer('a','X');
 players.createPlayer('b','O');
+userInteraction.enableGridInteraction();

@@ -30,4 +30,8 @@ h1 {
 
 .single_grid {
     border: 1px solid black;
+    display: flex;
+    font-size: 15rem;
+    align-items: center;
+    justify-content: center;
 }
