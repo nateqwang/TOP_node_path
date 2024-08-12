@@ -1,0 +1,30 @@
+.dropdown {
+    margin-left: 500px;
+    margin-top: 400px;
+    position: relative;
+}
+
+.dropdown_btn {
+    height: 50px;
+    width: 300px;
+    font-size: 1.2rem;
+}
+
+.dropdown_items_container {
+    position: absolute;
+}
+
+.dropdown_item {
+    box-sizing: border-box;
+    height: 50px;
+    width: 300px;
+    border-left: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    font-size: 1.5rem;
+    padding: 15px;
+}
+
+.dropdown_item:hover {
+    background-color: lightgray;
+}
