@@ -17,10 +17,10 @@
         </div>
         <dialog>
             <form method="post" action="#" onsubmit="return processForm()">
-                <input type="text" id="new_title" name="new_title" placeholder="title">
-                <input type="text" id="new_author" name="new_author" placeholder="author">
-                <input type="number" id="new_pages" name="new_pages" placeholder="number of pages">
-                <input type="text" id="read_status" name="read_status" placeholder="read? (true/false)">
+                <input type="text" id="new_title" name="new_title" placeholder="title" required>
+                <input type="text" id="new_author" name="new_author" placeholder="author" required>
+                <input type="number" id="new_pages" name="new_pages" placeholder="number of pages" required>
+                <input type="text" id="read_status" name="read_status" placeholder="read? (true/false)" required>
                 <button type="submit">Add book</button>
             </form>
         </dialog>

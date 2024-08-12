@@ -93,6 +93,10 @@ function processForm () {
     return false;
 }
 
+const validateBookForm = function () {
+    
+}
+
 
 
 
