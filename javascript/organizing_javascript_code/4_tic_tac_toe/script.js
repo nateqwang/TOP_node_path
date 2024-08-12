@@ -68,14 +68,19 @@ const gameLogic = (function () {
     }
 
     const playRound = function (player,arrayNum) {
-        if ((gameboard.gameboardArray[arrayNum] === 2) && arrayNum <= 9) {
-            gameboard.gameboardArray[arrayNum] = player.marker;
-            gameLogic.increaseTurnNum();
-            displayFunctions.displayBoard();
-        } else {
-            playRound (player, Number(prompt('invalid, try again')));
+        gameboard.gameboardArray[arrayNum] = player.marker;
+        gameLogic.increaseTurnNum();
+        displayFunctions.displayBoard();
+    }
+
+    const placeMarker = function (index) {
+        if (gameLogic.turnNum % 2 === 0) {
+            gameLogic.playRound(players.players[0],index);
+        } else if (gameLogic.turnNum % 2 === 1) {
+            gameLogic.playRound(players.players[1],index);
         }
     }
+
     return {
         playGame,
         playRound,
@@ -92,7 +97,10 @@ const displayFunctions = (function () {
     const displayBoard = function () {
         for (let i = 0; i < 9; i++) {
             let currentGrid = gameboard.individualGrids[i];
-            currentGrid.textContent = `${gameboard.gameboardArray[i]}`
+            if (gameboard.gameboardArray[i] !== 2) {
+                currentGrid.textContent = `${gameboard.gameboardArray[i]}`
+            }
+            
         }
     }
 
@@ -105,13 +113,28 @@ const userInteraction = (function () {
     const enableGridInteraction = function () {
         for (let i = 0; i < 9; i++) {
             let index = Number(gameboard.individualGrids[i].getAttribute('id'));
-            gameboard.individualGrids[i].addEventListener('click', () => {
+
+            gameboard.individualGrids[i].addEventListener('click', function placeMarker () {
                 if (gameLogic.turnNum % 2 === 0) {
                     gameLogic.playRound(players.players[0],index);
                 } else if (gameLogic.turnNum % 2 === 1) {
                     gameLogic.playRound(players.players[1],index);
                 }
-            })
+            });
+        }
+    }
+
+    const disableGridInteraction = function () {
+        for (let i = 0; i < 9; i++) {
+            let index = Number(gameboard.individualGrids[i].getAttribute('id'));
+
+            gameboard.individualGrids[i].removeEventListener('click', function placeMarker () {
+                if (gameLogic.turnNum % 2 === 0) {
+                    gameLogic.playRound(players.players[0],index);
+                } else if (gameLogic.turnNum % 2 === 1) {
+                    gameLogic.playRound(players.players[1],index);
+                }
+            });
         }
     }
 
@@ -122,6 +145,7 @@ const userInteraction = (function () {
 
     return {
         enableGridInteraction,
+        disableGridInteraction,
         addPlayer
     }
 
