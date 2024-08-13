@@ -73,14 +73,6 @@ const gameLogic = (function () {
         displayFunctions.displayBoard();
     }
 
-    const placeMarker = function (index) {
-        if (gameLogic.turnNum % 2 === 0) {
-            gameLogic.playRound(players.players[0],index);
-        } else if (gameLogic.turnNum % 2 === 1) {
-            gameLogic.playRound(players.players[1],index);
-        }
-    }
-
     return {
         playGame,
         playRound,
@@ -117,8 +109,32 @@ const userInteraction = (function () {
             gameboard.individualGrids[i].addEventListener('click', function placeMarker () {
                 if (gameLogic.turnNum % 2 === 0) {
                     gameLogic.playRound(players.players[0],index);
+                    if (gameLogic.checkWin()) {
+                        const dialogModal = document.querySelector('dialog');
+                        const winMessage = document.querySelector('.win_message')
+                        winMessage.textContent = `${players.players[0].playerName} wins!`;
+                        dialogModal.showModal();
+                        gameboard.gameboardArray = [2, 2, 2, 2, 2, 2, 2, 2, 2];
+                        const closeBtn = document.querySelector('.close');
+                        closeBtn.addEventListener('click', () => {
+                            dialogModal.close();
+                        });
+                        gameLogic.playerCount = 0;
+                    }
                 } else if (gameLogic.turnNum % 2 === 1) {
                     gameLogic.playRound(players.players[1],index);
+                    if (gameLogic.checkWin()) {
+                        const dialogModal = document.querySelector('dialog');
+                        const winMessage = document.querySelector('.win_message')
+                        winMessage.textContent = `${players.players[1].playerName} wins!`;
+                        dialogModal.showModal();
+                        gameboard.gameboardArray = [2, 2, 2, 2, 2, 2, 2, 2, 2];
+                        const closeBtn = document.querySelector('.close');
+                        closeBtn.addEventListener('click', () => {
+                            dialogModal.close();
+                        });
+                        gameLogic.playerCount = 0;
+                    }
                 }
             });
         }
