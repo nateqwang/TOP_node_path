@@ -40,7 +40,7 @@
     height: 75px;
     width: 600px;
     font-size: 2rem;
-    border-radius: 10px;
+    border-radius: 35px;
     padding: 15px;
     text-align: center;
     border: none;
@@ -55,4 +55,15 @@
     font-size: 3.5rem;
     font-weight: 700;
     color: white;
+}
+
+.address {
+    background-color: #90e0ef;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
