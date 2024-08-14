@@ -46,6 +46,10 @@
     border: none;
 }
 
+.right_header input:hover {
+    border: 3px solid #03045e;
+}
+
 .fc_selection {
     background-color: #0077b6;
     height: 75px;
@@ -55,6 +59,11 @@
     font-size: 3.5rem;
     font-weight: 700;
     color: white;
+}
+
+.fc_selection:hover {
+    border: 5px solid #03045e;
+    background-color: #90e0ef;
 }
 
 .address {
