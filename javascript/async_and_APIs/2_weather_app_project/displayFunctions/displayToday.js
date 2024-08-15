@@ -1,10 +1,11 @@
 import processCondition from "../objects/processCondition.js";
+import globalSettings from "../objects/globalSettings.js";
 import doc from "../objects/doc.js";
 
 const displayToday = function (data) {
-    doc.todayTemp.textContent = `${data.daysInfo[0].temp}`;
-    doc.todayHigh.textContent = `H:${data.daysInfo[0].tempmax}`;
-    doc.todayLow.textContent = `L:${data.daysInfo[0].tempmin}`;
+    doc.todayTemp.textContent = `${globalSettings.processTemp(data.daysInfo[0].temp)}`;
+    doc.todayHigh.textContent = `H:${globalSettings.processTemp(data.daysInfo[0].tempmax)}`;
+    doc.todayLow.textContent = `L:${globalSettings.processTemp(data.daysInfo[0].tempmin)}`;
     let processedCondition = processCondition(data.daysInfo[0].condition);
     doc.todayConditionIcon.src = processedCondition[0];
     doc.todayConditionDesc.textContent = `${processedCondition[1]}`;

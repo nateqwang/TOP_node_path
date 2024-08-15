@@ -6,7 +6,7 @@ const globalSettings = {
         if (globalSettings.cf == 'F') {
             return temp;
         } else if (globalSettings.cf == 'C') {
-            return (temp - 32) * 5 / 9;
+            return ((temp - 32) * 5 / 9).toFixed(1);
         }
 
     }

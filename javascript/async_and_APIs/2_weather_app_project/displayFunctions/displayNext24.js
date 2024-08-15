@@ -4,6 +4,10 @@ import processCondition from "../objects/processCondition.js";
 
 const displayNext24 = function (data) {
 
+    while (doc.next24.hasChildNodes()) {
+        doc.next24.firstChild.remove();
+    }
+
     for (let i = 0; i < 24; i++) {
         const hourContainer = document.createElement('div');
         hourContainer.setAttribute('class','hour');

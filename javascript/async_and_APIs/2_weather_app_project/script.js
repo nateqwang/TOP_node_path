@@ -19,7 +19,20 @@ const getWeather = function (location) {
             displayHeader(response);
             displayToday(response);
             displayNow(response);
-            displayNext24(response);s
+            displayNext24(response);
+            doc.fcSelectionBtn.addEventListener('click', () => {
+                if (globalSettings.cf == 'F') {
+                    globalSettings.cf = 'C';
+                    doc.fcSelectionBtn.textContent = 'C';
+                } else if (globalSettings.cf == 'C') {
+                    globalSettings.cf = 'F';
+                    doc.fcSelectionBtn.textContent = 'F';
+                }
+                displayHeader(response);
+                displayToday(response);
+                displayNow(response);
+                displayNext24(response);
+            })
         })
     
         return fetched;
@@ -68,18 +81,16 @@ const processData = function (data) {
     }
 }
 
+doc.search.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        let location = searchInput.value;
+        getWeather(location);
+    }
+})
+
+getWeather('bethesda');
 
 
-
-
-const bet = getWeather('bethesda');
-
-console.log(bet);
-
-// bet.then((response) => {
-//     const ind = findCurrentHour(response.daysInfo[0].hours);
-//     console.log(ind);
-// })
 
 
 
