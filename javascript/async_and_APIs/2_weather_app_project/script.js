@@ -46,7 +46,7 @@ const processData = function (data) {
             tempmax: globalSettings.processTemp(day.tempmax),
             condition: globalSettings.processTemp(day.conditions),
             feelslike: globalSettings.processTemp(day.feelslike),
-            humidity: day.humindity,
+            humidity: day.humidity,
             sunrise: day.sunrise,
             sunset: day.sunset,
             uvindex: day.uvindex,
