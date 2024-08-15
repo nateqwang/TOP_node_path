@@ -13,10 +13,10 @@ const getWeather = function (location) {
         .then((response) => {
             return processData(response);
         })
-        .then(response => {
-            displayHeader(response);
-            displayToday(response);
-        })
+        // .then(response => {
+        //     displayHeader(response);
+        //     displayToday(response);
+        // })
     
         return fetched;
 
@@ -64,13 +64,30 @@ const processData = function (data) {
 }
 
 
+const findCurrentHour = function (arrayHours) {
 
+    const now = new Date();
+    let currentHour = String(now.getHours());
+    if (currentHour.length == 1) {
+        currentHour = `0${currentHour}`;
+    };
+    for (let i = 0; i < arrayHours.length; i++) {
+        if (arrayHours[i].hour.substr(0,2) == currentHour) {
+            return i;
+        }
+    }
+
+}
 
 
 const bet = getWeather('bethesda');
 
 console.log(bet);
 
+bet.then((response) => {
+    const ind = findCurrentHour(response.daysInfo[0].hours);
+    console.log(ind);
+})
 
 
 
