@@ -7,7 +7,7 @@ const findCurrentHour = function (arrayHours) {
     };
     for (let i = 0; i < arrayHours.length; i++) {
         if (arrayHours[i].hour.substr(0,2) == currentHour) {
-            return i;
+            return arrayHours[i];
         }
     }
 
