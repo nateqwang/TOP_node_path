@@ -2,6 +2,7 @@ import globalSettings from "./objects/globalSettings.js";
 import doc from "./objects/doc.js";
 import displayHeader from "./displayFunctions/displayHeader.js";
 import displayToday from "./displayFunctions/displayToday.js";
+import displayNow from "./displayFunctions/displayNow.js";
 
 
 const getWeather = function (location) {
@@ -13,10 +14,11 @@ const getWeather = function (location) {
         .then((response) => {
             return processData(response);
         })
-        // .then(response => {
-        //     displayHeader(response);
-        //     displayToday(response);
-        // })
+        .then(response => {
+            displayHeader(response);
+            displayToday(response);
+            displayNow(response);
+        })
     
         return fetched;
 
