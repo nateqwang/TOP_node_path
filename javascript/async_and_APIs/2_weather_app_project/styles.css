@@ -1,0 +1,273 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 200px;
+    height: 150px;
+    background-color: #0077b6;
+    align-items: center;
+}
+
+.left_header {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.left_header>img {
+    height: 75px;
+}
+
+.left_header>p {
+    font-weight: 700;
+    font-size: 4rem;
+    color: white;
+}
+
+.right_header {
+    display: flex;
+    gap: 120px;
+    align-items: center;
+}
+
+.right_header input {
+    height: 75px;
+    width: 600px;
+    font-size: 2rem;
+    border-radius: 35px;
+    padding: 15px;
+    text-align: center;
+    border: none;
+}
+
+.right_header input:hover {
+    border: 3px solid #03045e;
+}
+
+.fc_selection {
+    background-color: #0077b6;
+    height: 75px;
+    width: 75px;
+    border-radius: 10px;
+    border: 5px solid #90e0ef;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.fc_selection:hover {
+    border: 5px solid #03045e;
+    background-color: #90e0ef;
+}
+
+.address {
+    background-color: #90e0ef;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body {
+    height: 100vh;
+    background: rgb(0,119,182);
+    background: linear-gradient(rgba(0,119,182,1) 0%, rgba(0,180,216,1) 24%, rgba(0,212,255,1) 100%);    
+    background-size: auto 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 100px 20%;
+}
+
+.body {
+    display: grid;
+    grid-template-columns: 3fr 1.4fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px;
+}
+
+.today {
+    background-color: white;
+    padding: 50px;
+    border-radius: 45px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px repeat( 5 , 50px);
+    grid-row: 1;
+    padding-top: 100px;
+
+}
+
+.temps_heading {
+    grid-column: 1 / span 1;
+    grid-row: 2;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.today_left {
+    grid-row: 3 / 7;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    align-items: center;
+}
+
+.today>h2 {
+    grid-column: 1 / span 2;
+    font-size: 2rem;
+    font-weight: 700;
+    align-self: flex-start;
+}
+
+.today_temps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.today_temp {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-bottom: -15px;
+}
+
+.high_low {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    font-weight: 700;
+    color: gray;
+    gap: 15px;
+}
+
+.today .weather_icon {
+    height: 125px;
+    width: 125px;
+}
+
+.today_condition {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.property {
+    display: flex;
+    padding: 5px 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    border-radius: 3px;
+}
+
+.label {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.property_icon {
+    height: 30px;
+    width: 30px;
+}
+
+.label>p,
+.property>p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-top: 5px;
+}
+
+.now {
+    background-color: white;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.next24 {
+    background-color: white;
+    grid-row: 1 / span 2;
+}
+
+.now {
+    border-radius: 45px;
+    padding: 100px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.now_condition {
+    height: 200px;
+    width: 200px;
+}
+
+.now>h2 {
+    grid-column: 1 / span 2;
+    font-size: 2rem;
+    font-weight: 700;
+    align-self: center;
+    justify-self: center;
+}
+
+.temp_feels_now {
+    font-size: 7rem;
+    font-weight: 700;
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.feelslike_now {
+    font-size: 2rem;
+    color: gray;
+}
+
+.condition_now {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.condition_now_desc {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.next24 {
+    border-radius: 45px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-rows: repeat( 24 , 70px);
+    padding: 20px;
+}
+
+.hour {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hour_icon {
+    height: 50px;
+    width: 50px;
+}
+
+.hour p {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
