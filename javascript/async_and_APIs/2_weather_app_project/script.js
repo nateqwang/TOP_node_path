@@ -1,3 +1,6 @@
+import globalSettings from "./objects/globalSettings.js";
+import doc from "./objects/doc.js";
+
 // data = fetch('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/bethesda/next7days?key=34A76APDQMZHC36HZLFSTPTZ7&include=days,hours', {mode:'cors'})
 //         .then((response) => {
 //             return response.json();
@@ -6,46 +9,7 @@
 
 // console.log(data);
 
-const globalSetting = {
 
-    cf: 'f',
-    processTemp: function (temp) {
-
-        if (globalSetting.cf == 'f') {
-            return temp;
-        } else if (globalSetting.cf == 'c') {
-            return (temp - 32) * 5 / 9;
-        }
-
-    }
-
-}
-
-const doc = {
-
-    search: document.querySelector('.text_input'),
-    fcSelectionBtn: document.querySelector('.fc_selection'),
-    address: document.querySelector('.address'),
-
-    todayTemp: document.querySelector('.today_temp'),
-    todayHigh: document.querySelector('.high'),
-    todayLow: document.querySelector('.low'),
-    todayConditionIcon: document.querySelector('.conditions img'),
-    todayConditionDesc: document.querySelector('.today_condition'),
-
-    todaySunrise: document.querySelector('.sunrise'),
-    todaySunset: document.querySelector('.sunset'),
-    todayHumidity: document.querySelector('.humidity'),
-    todayUV: document.querySelector('.uv_index'),
-    todayVisibility: document.querySelector('.visibility'),
-
-    nowTemp: document.querySelector('.temp_now'),
-    nowFeelsLike: document.querySelector('.feelslike_now'),
-    nowConditionIcon: document.querySelector('.now_condition'),
-    nowConditionDesc: document.querySelector('.condition_now_desc'),
-
-    next24: document.querySelector('.next24')
-}
 
 const getWeather = function (location) {
 
