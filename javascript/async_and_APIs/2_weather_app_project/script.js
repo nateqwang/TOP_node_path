@@ -3,6 +3,7 @@ import doc from "./objects/doc.js";
 import displayHeader from "./displayFunctions/displayHeader.js";
 import displayToday from "./displayFunctions/displayToday.js";
 import displayNow from "./displayFunctions/displayNow.js";
+import displayNext24 from "./displayFunctions/displayNext24.js";
 
 
 const getWeather = function (location) {
@@ -18,6 +19,7 @@ const getWeather = function (location) {
             displayHeader(response);
             displayToday(response);
             displayNow(response);
+            displayNext24(response);s
         })
     
         return fetched;
