@@ -16,6 +16,7 @@ const doc = {
     todayUV: document.querySelector('.uv_index'),
     todayVisibility: document.querySelector('.visibility'),
 
+    nowDate: document.querySelector('.date_time_now'),
     nowTemp: document.querySelector('.temp_now'),
     nowFeelsLike: document.querySelector('.feelslike_now'),
     nowConditionIcon: document.querySelector('.now_condition'),
